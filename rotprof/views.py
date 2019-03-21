@@ -8,5 +8,5 @@ def prof_list_branch(request, branch):
     posts = Professor.objects.filter(Branch = branch)
     return render(request, 'rotprof/prof_list_branch.html', {'posts' : posts})
 def prof_detail(request, pk, bran):
-    post = Professor.objects.filter(pk=pk, Branch=bran)
+    post = Professor.objects.get(pk=pk, Branch=bran)
     return render(request, 'rotprof/prof_detail.html', {'post': post})

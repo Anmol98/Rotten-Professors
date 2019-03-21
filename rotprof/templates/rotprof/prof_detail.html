@@ -1,1 +1,10 @@
-{{post}}
+{% extends 'rotprof/base.html' %}
+{% block content %}
+<h2> Name : {{post.Name}} </h2>
+<div>
+  <img src="{{ post.picture.url }}" height = "300" width = "300">
+</div>
+<p> Branch : {{post.Branch}} </p>
+<p> College : {{post.College}} </p>
+
+{% endblock %}
