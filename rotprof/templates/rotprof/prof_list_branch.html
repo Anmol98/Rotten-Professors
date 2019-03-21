@@ -1,6 +1,13 @@
 {% extends 'rotprof/base.html' %}
 {% block content %}
   {% for post in posts %}
-  {{post.Name}}
+  <h2><a href="">Name : {{ post.Name }}</a></h2>
+
+  <div class = "ima">
+    <img src="{{ post.picture.url }}" height = "300" width = "300">
+    </div>
+    <div class = "bandc">
+      <p>Branch : {{ post.Branch }}</p>
+      <p>College : {{ post.College|linebreaksbr }}</p>
   {%endfor%}
 {% endblock %}
