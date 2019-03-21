@@ -5,5 +5,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.branch_list, name='branch_list'),
-    path('post/<str:pk>/', views.prof_list_branch, name='prof_list_branch')
+    path('list/<str:branch>/', views.prof_list_branch, name='prof_list_branch'),
+    path('list/<str:bran>/<int:pk>/', views.prof_detail, name='prof_detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

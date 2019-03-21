@@ -1,7 +1,8 @@
 {% extends 'rotprof/base.html' %}
 {% block content %}
   {% for post in posts %}
-  <h2><a href="">Name : {{ post.Name }}</a></h2>
+  <h2><a href="{% url 'prof_detail' bran=post.Branch pk=post.pk %}">Name : {{ post.Name }}</a></h2>
+
 
   <div class = "ima">
     <img src="{{ post.picture.url }}" height = "300" width = "300">
@@ -9,5 +10,6 @@
     <div class = "bandc">
       <p>Branch : {{ post.Branch }}</p>
       <p>College : {{ post.College|linebreaksbr }}</p>
+      </div>
   {%endfor%}
 {% endblock %}

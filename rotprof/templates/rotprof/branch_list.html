@@ -1,9 +1,9 @@
 {% extends 'rotprof/base.html' %}
 {% block content %}
-  <a href="{% url 'prof_list_branch' pk='ECE' %}"> ECE</a><br>
-  <a href="{% url 'prof_list_branch' pk='CSE' %}"> CSE</a><br>
-  <a href="{% url 'prof_list_branch' pk='Civil' %}"> Civil</a><br>
-  <a href="{% url 'prof_list_branch' pk='Chemical' %}"> Chemical</a><br>
-  <a href="{% url 'prof_list_branch' pk='Mechanical' %}"> Mechanical</a><br>
-  <a href="{% url 'prof_list_branch' pk='MSME' %}"> MSME</a><br>
+  <a href="{% url 'prof_list_branch' branch='ECE' %}"> ECE</a><br>
+  <a href="{% url 'prof_list_branch' branch='CSE' %}"> CSE</a><br>
+  <a href="{% url 'prof_list_branch' branch='Civil' %}"> Civil</a><br>
+  <a href="{% url 'prof_list_branch' branch='Chemical' %}"> Chemical</a><br>
+  <a href="{% url 'prof_list_branch' branch='Mechanical' %}"> Mechanical</a><br>
+  <a href="{% url 'prof_list_branch' branch='MSME' %}"> MSME</a><br>
 {% endblock %}
