@@ -7,4 +7,17 @@
 <p> Branch : {{post.Branch}} </p>
 <p> College : {{post.College}} </p>
 
+<hr>
+<p> Comments: </p>
+{% for comment in post.comments.all %}
+    <div class="comment">
+      <p>{{ comment.text }}</p>
+        <div class="date">{{ comment.created_date }}</div>
+        <strong>{{ comment.author|linebreaks }}</strong>
+        <hr>
+    </div>
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
+
 {% endblock %}
