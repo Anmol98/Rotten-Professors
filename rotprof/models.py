@@ -14,6 +14,7 @@ class Professor(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey('rotprof.Professor', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200)
+    rating = models.IntegerField()
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     approved_comment = models.BooleanField(default=False)
